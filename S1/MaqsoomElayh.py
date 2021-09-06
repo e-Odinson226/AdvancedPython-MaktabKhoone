@@ -31,13 +31,20 @@ def mEA(x):
     return mElAvCounter
 
 # Main ---------------------------------------
-many = 5
+many = 10
 numbers = getNums(many)
 res = []
 for number in numbers:
-    res.append( {number : mEA(number)} )
-print(res)
+    res.append( {"number": number ,
+                "mEA": mEA(number) }    )
 
+res.sort(key=lambda mEA:  mEA["mEA"], reverse=True)
 
-
-#print(nums)
+try:
+    if res[0]["mEA"] == res[1]["mEA"]:
+        for i in range( len(res) ):
+            if res[i]["mEA"] == res[i+1]["mEA"] and res[i]["number"] < res[i+1]["number"]:
+                res[i], res[i+1] = res[i+1], res[i]
+except:
+    Exception
+print(res[0]["number"], res[0]["mEA"])
