@@ -18,7 +18,7 @@ def gameAnalyze(t1, t2):
         teams[ t2["country"] ]["points"]+=1
 
 def getData(c1, c2, string):
-    g1, g2 = input().split("-")
+    g1, g2 = string.split("-")
     cn1 = {"country": c1, "goal": g1}
     cn2 = {"country": c2, "goal": g2}
     return c1, c2
@@ -36,3 +36,8 @@ teams.append({"spain" : spain})
 teams.append({"morocco" : morocco})
 print(teams)
 
+s1 = input()
+data1 = getData("iran", "spain", s1)
+gameAnalyze(data1[0])
+gameAnalyze(data1[1])
+print(teams)
