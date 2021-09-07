@@ -17,3 +17,17 @@ def gameAnalyze(t1, t2):
         teams[ t2["country"] ]["draws"]+=1
         teams[ t2["country"] ]["points"]+=1
 
+
+
+
+# Main ----------------------
+iran =      {"wins":0,"loses":0, "draws":0, "gd":0, "points":0}
+spain =     {"wins":0,"loses":0, "draws":0, "gd":0, "points":0}
+portugal =  {"wins":0,"loses":0, "draws":0, "gd":0, "points":0}
+morocco =   {"wins":0,"loses":0, "draws":0, "gd":0, "points":0}
+teams.append({"iran" : iran})
+teams.append({"portugal" : portugal})
+teams.append({"spain" : spain})
+teams.append({"morocco" : morocco})
+print(teams)
+
