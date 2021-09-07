@@ -21,7 +21,7 @@ def getData(c1, c2, string):
     g1, g2 = string.split("-")
     cn1 = {"country": c1, "goal": g1}
     cn2 = {"country": c2, "goal": g2}
-    return c1, c2
+    return cn1, cn2
 
 
 
@@ -38,6 +38,7 @@ print(teams)
 
 s1 = input()
 data1 = getData("iran", "spain", s1)
-gameAnalyze(data1[0])
-gameAnalyze(data1[1])
-print(teams)
+print(data1)
+# gameAnalyze(data1[0])
+# gameAnalyze(data1[1])
+# print(teams)
