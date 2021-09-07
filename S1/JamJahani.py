@@ -43,14 +43,10 @@ def getData(c1, c2, string):
 
 
 # Main ----------------------
-iran =      {"wins":0,"loses":0, "draws":0, "gd":0, "points":0}
-spain =     {"wins":0,"loses":0, "draws":0, "gd":0, "points":0}
-portugal =  {"wins":0,"loses":0, "draws":0, "gd":0, "points":0}
-morocco =   {"wins":0,"loses":0, "draws":0, "gd":0, "points":0}
-teams.update({"spain" : spain})
-teams.update({"iran" : iran})
-teams.update({"portugal" : portugal})
-teams.update({"morocco" : morocco})
+teams.update({"spain" : {"wins":0,"loses":0, "draws":0, "gd":0, "points":0} })
+teams.update({"iran" :  {"wins":0,"loses":0, "draws":0, "gd":0, "points":0} })
+teams.update({"portugal" :  {"wins":0,"loses":0, "draws":0, "gd":0, "points":0} })
+teams.update({"morocco" :   {"wins":0,"loses":0, "draws":0, "gd":0, "points":0} })
 
 s1 = input()
 data1 = getData("iran", "spain", s1)
