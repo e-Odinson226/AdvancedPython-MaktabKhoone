@@ -17,3 +17,9 @@ try:
 except ValueError:
     print("Invalid input!!!")
 
+try:
+    listed = [{key:val} for key, val in generes.items()]
+    listed.sort(key=lambda pair: list(pair.values())[0] ,reverse=True )
+    print(listed)
+except:
+    raise Exception
