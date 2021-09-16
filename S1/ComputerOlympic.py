@@ -23,12 +23,9 @@ calculate(persons ,getter("m.erFa.c#") )
 calculate(persons ,getter("f.sArA.c+") )
 calculate(persons ,getter("f.asEm.c+") )
 
-
-persons["m"].sort( key=lambda d: d["name"] )
-persons["f"].sort( key=lambda d: d["name"] )
-
-print(persons)
 for d in persons:
-    print(d)
-# print(persons["f"])
-# print(persons["m"])
+    persons[d].sort( key=lambda d: d["name"] )
+
+for l in persons:
+    for dic in persons[l]:
+        print(f"{l} {dic['name']} {dic['lang']}") 
